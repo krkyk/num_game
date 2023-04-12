@@ -45,7 +45,7 @@ export default function App() {
       <p>外れると選んだ数字の数だけポイントが減ります。</p>
       <dl>
         <NumField number={number} />
-        <NumBtn count={count} handleClick={handleClick} />
+        <NumBtn disabled={count <= 0} handleClick={handleClick} />
       </dl>
       <Count count={count} handleRestart={handleRestart} />
       <Point point={point} />

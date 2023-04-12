@@ -1,9 +1,9 @@
-export default function NumBtn({ count, handleClick }) {
+export default function NumBtn({ disabled, handleClick }) {
   const btnCount = 5;
   const btns = [];
   for (let i = 1; i <= btnCount; i++) {
     btns.push(
-      <button disabled={count <= 0} onClick={() => handleClick(i)} key={i}>
+      <button disabled={disabled} onClick={() => handleClick(i)} key={i}>
         {i}
       </button>
     );
