@@ -1,4 +1,58 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
   font-family: sans-serif;
   text-align: center;
+  padding: 0;
+}
+
+h2 {
+  color: #3e62ad;
+}
+
+dl {
+  border: 3px solid #c1e4e9;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 25%;
+}
+
+dd {
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+button {
+  margin: 0 5px;
+  padding: 6px 10px;
+  color: #fff;
+  background-color: #84a2d4;
+  border: none;
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: #eaedf7;
+}
+
+.random-num {
+  font-size: x-large;
+}
+
+.point-num {
+  font-size: x-large;
+}
+
+.reset-btn {
+  color: #fff;
+  background-color: #fabf14;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.reset-btn:hover {
+  color: #fff;
+  background-color: #fff1cf;
 }
