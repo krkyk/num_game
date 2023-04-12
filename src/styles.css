@@ -35,6 +35,7 @@ button {
 
 button:hover {
   background-color: #eaedf7;
+  cursor: pointer;
 }
 
 .random-num {

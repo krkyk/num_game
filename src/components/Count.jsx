@@ -1,10 +1,16 @@
+import { motion } from "framer-motion";
+
 export default function Count({ count, handleRestart }) {
   return (
     <>
       {count <= 0 ? (
-        <button className="reset-btn" onClick={handleRestart}>
+        <motion.button
+          className="reset-btn"
+          onClick={handleRestart}
+          whileHover={{ scale: 1.2, y: -5 }}
+        >
           リセット
-        </button>
+        </motion.button>
       ) : (
         <p>ボタンを押せるのはあと{count}回です。</p>
       )}

@@ -4,6 +4,7 @@ import NumBtn from "./components/NumBtn";
 import NumField from "./components/NumField";
 import Point from "./components/Point";
 import "./styles.css";
+import { motion } from "framer-motion";
 
 export default function App() {
   const [number, setNumber] = useState("?");
@@ -38,11 +39,21 @@ export default function App() {
 
   return (
     <>
-      <h2>数当てゲーム</h2>
-      <p>
+      <motion.h2 whileHover={{ scale: 1.2, rotate: 360 }}>
+        数当てゲーム
+      </motion.h2>
+      <motion.p
+        initial={{ y: 20, opacity: 1 }}
+        animate={{ y: 0, opacity: 1, transitionDuration: "0.5s" }}
+      >
         選んだ数字とランダムに表示される数字が一致すると、選んだ数字の数だけポイントが加算されます。
-      </p>
-      <p>外れると選んだ数字の数だけポイントが減ります。</p>
+      </motion.p>
+      <motion.p
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1, transitionDuration: "0.5s" }}
+      >
+        外れると選んだ数字の数だけポイントが減ります。
+      </motion.p>
       <dl>
         <NumField number={number} />
         <NumBtn disabled={count <= 0} handleClick={handleClick} />
