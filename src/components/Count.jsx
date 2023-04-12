@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Alert } from "@mui/material";
 
 export default function Count({ count, handleRestart }) {
   return (
@@ -12,7 +13,9 @@ export default function Count({ count, handleRestart }) {
           リセット
         </motion.button>
       ) : (
-        <p>ボタンを押せるのはあと{count}回です。</p>
+        <Alert severity="info" sx={{ m: "20px 20%", fontSize: "100%" }}>
+          ボタンを押せるのはあと{count}回です。
+        </Alert>
       )}
     </>
   );

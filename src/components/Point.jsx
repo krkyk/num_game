@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import CreatePaper from "./layouts/CreatePaper";
 
 export default function Point({ point }) {
   return (
-    <dl>
+    <CreatePaper>
       <dt>あなたのポイント</dt>
       <motion.dd
         className="point-num"
@@ -10,6 +11,6 @@ export default function Point({ point }) {
       >
         {point}
       </motion.dd>
-    </dl>
+    </CreatePaper>
   );
 }
