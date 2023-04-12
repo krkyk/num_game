@@ -3,7 +3,7 @@ export default function NumBtn({ count, handleClick }) {
   const btns = [];
   for (let i = 1; i <= btnCount; i++) {
     btns.push(
-      <button disabled={count <= 0} onClick={() => handleClick(i)}>
+      <button disabled={count <= 0} onClick={() => handleClick(i)} key={i}>
         {i}
       </button>
     );

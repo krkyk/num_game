@@ -30,6 +30,12 @@ export default function App() {
     setCount(count - 1);
   }
 
+  function handleRestart() {
+    setNumber("?");
+    setCount(10);
+    setPoint(0);
+  }
+
   return (
     <>
       <h2>数当てゲーム</h2>
@@ -41,7 +47,7 @@ export default function App() {
         <NumField number={number} />
         <NumBtn count={count} handleClick={handleClick} />
       </dl>
-      <Count count={count} />
+      <Count count={count} handleRestart={handleRestart} />
       <Point point={point} />
     </>
   );
