@@ -6,15 +6,12 @@ import Point from "./components/Point";
 import "./styles.css";
 import { motion } from "framer-motion";
 import CreatePaper from "./components/layouts/CreatePaper";
-import { UseModal } from "./components/hooks/UseModal";
-import Modal from "./components/Modal";
-import { Portal } from "./components/Portal";
+import Description from "./components/Description";
 
 export default function App() {
   const [number, setNumber] = useState("?");
   const [count, setCount] = useState(10);
   const [point, setPoint] = useState(0);
-  const { isOpen, onOpen, onClose } = UseModal();
 
   function handleClick(selectNum) {
     // Math.random(): 0 以上 1 未満の範囲で浮動小数点の擬似乱数を返す
@@ -47,16 +44,7 @@ export default function App() {
       <motion.h2 whileHover={{ scale: 1.2, rotate: 360 }}>
         数当てゲーム
       </motion.h2>
-      <div>
-        <button onClick={onOpen} className="modal-btn">
-          遊び方はこちら
-        </button>
-        {isOpen && (
-          <Portal>
-            <Modal onClose={onClose} />
-          </Portal>
-        )}
-      </div>
+      <Description />
       <CreatePaper>
         <NumField number={number} />
         <NumBtn disabled={count <= 0} handleClick={handleClick} />

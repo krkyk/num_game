@@ -60,7 +60,7 @@ button:hover {
 
 .modal {
   position: absolute;
-  top: 90px;
+  top: 80px;
   background-color: #f7fcfe;
   border-radius: 10px;
   padding-top: 10px;
@@ -71,5 +71,5 @@ button:hover {
   color: #fff;
   background-color: #4d5aaf;
   border-radius: 10px;
-  margin: 20px 0;
+  margin: 10px 0 20px 0;
 }
