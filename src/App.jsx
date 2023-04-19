@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import CreatePaper from "./components/layouts/CreatePaper";
 import { UseModal } from "./components/hooks/UseModal";
 import Modal from "./components/Modal";
+import { Portal } from "./components/Portal";
 
 export default function App() {
   const [number, setNumber] = useState("?");
@@ -50,7 +51,11 @@ export default function App() {
         <button onClick={onOpen} className="modal-btn">
           遊び方はこちら
         </button>
-        {isOpen && <Modal onClose={onClose} />}
+        {isOpen && (
+          <Portal>
+            <Modal onClose={onClose} />
+          </Portal>
+        )}
       </div>
       <CreatePaper>
         <NumField number={number} />

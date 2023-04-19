@@ -59,6 +59,8 @@ button:hover {
 }
 
 .modal {
+  position: absolute;
+  top: 90px;
   background-color: #f7fcfe;
   border-radius: 10px;
   padding-top: 10px;
