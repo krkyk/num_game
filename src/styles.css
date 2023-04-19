@@ -57,3 +57,17 @@ button:hover {
   color: #fff;
   background-color: #fff1cf;
 }
+
+.modal {
+  background-color: #f7fcfe;
+  border-radius: 10px;
+  padding-top: 10px;
+  margin: 0 10px;
+}
+
+.modal-btn {
+  color: #fff;
+  background-color: #4d5aaf;
+  border-radius: 10px;
+  margin: 20px 0;
+}
