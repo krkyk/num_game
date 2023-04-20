@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Alert } from "@mui/material";
+import RestartAltIcon from "@mui/icons-material/RestartAlt";
 
 export default function Count({ count, handleRestart }) {
   return (
@@ -10,7 +11,8 @@ export default function Count({ count, handleRestart }) {
           onClick={handleRestart}
           whileHover={{ scale: 1.2, y: -5 }}
         >
-          リセット
+          リセット{" "}
+          <RestartAltIcon sx={{ fontSize: "25px", verticalAlign: "-6px" }} />
         </motion.button>
       ) : (
         <Alert
