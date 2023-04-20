@@ -68,8 +68,10 @@ dd {
   padding-top: 10px;
 }
 
-dt {
-  font-size: 20px;
+.point {
+  font-size: 25px;
+  font-weight: bold;
+  color: #2a4073;
 }
 
 .num-btn {
@@ -89,12 +91,10 @@ dt {
   cursor: pointer;
 }
 
-.random-num {
-  font-size: 80px;
-}
-
+.random-num,
 .point-num {
   font-size: 80px;
+  font-weight: bold;
 }
 
 .reset-btn {

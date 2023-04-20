@@ -4,7 +4,7 @@ import CreatePaper from "./layouts/CreatePaper";
 export default function Point({ point }) {
   return (
     <CreatePaper>
-      <dt>あなたのポイント</dt>
+      <dt className="point">得点</dt>
       <motion.dd
         className="point-num"
         whileTap={{ scale: 1.5, skew: "-15deg" }}

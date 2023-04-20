@@ -17,7 +17,14 @@ export default function Count({ count, handleRestart }) {
       ) : (
         <Alert
           severity="info"
-          sx={{ m: "50px 20%", fontSize: "110%", justifyContent: "center" }}
+          sx={{
+            width: "500px",
+            m: "40px auto",
+            p: "10px",
+            fontSize: "110%",
+            fontWeight: "bold",
+            justifyContent: "center"
+          }}
         >
           ボタンを押せるのはあと{count}回です。
         </Alert>
