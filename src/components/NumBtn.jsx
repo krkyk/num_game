@@ -10,6 +10,7 @@ export default function NumBtn({ disabled, handleClick }) {
         onClick={() => handleClick(i)}
         key={i}
         whileHover={{ scale: 1.2, y: -5 }}
+        className="num-btn"
       >
         {i}
       </motion.button>

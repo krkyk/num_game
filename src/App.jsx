@@ -4,9 +4,10 @@ import NumBtn from "./components/NumBtn";
 import NumField from "./components/NumField";
 import Point from "./components/Point";
 import "./styles.css";
-import { motion } from "framer-motion";
 import CreatePaper from "./components/layouts/CreatePaper";
 import Description from "./components/Description";
+import Header from "./components/layouts/Header";
+import Footer from "./components/layouts/Footer";
 
 export default function App() {
   const [number, setNumber] = useState("?");
@@ -41,9 +42,7 @@ export default function App() {
 
   return (
     <>
-      <motion.h2 whileHover={{ scale: 1.2, rotate: 360 }}>
-        数当てゲーム
-      </motion.h2>
+      <Header />
       <Description />
       <CreatePaper>
         <NumField number={number} />
@@ -51,6 +50,7 @@ export default function App() {
       </CreatePaper>
       <Count count={count} handleRestart={handleRestart} />
       <Point point={point} />
+      <Footer />
     </>
   );
 }

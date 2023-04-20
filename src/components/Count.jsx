@@ -13,7 +13,10 @@ export default function Count({ count, handleRestart }) {
           リセット
         </motion.button>
       ) : (
-        <Alert severity="info" sx={{ m: "20px 20%", fontSize: "100%" }}>
+        <Alert
+          severity="info"
+          sx={{ m: "50px 20%", fontSize: "110%", justifyContent: "center" }}
+        >
           ボタンを押せるのはあと{count}回です。
         </Alert>
       )}
